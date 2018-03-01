@@ -1,0 +1,239 @@
+{% extends 'baselogin.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block B %}
+    <div id="lp-register">
+    <div class="container wrapper">
+        <div class="row">
+            <div class="col-sm-5">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="intro-texts">
+                    <h2 class="text-white" style="color: #d32f2f;">Bienvenue les Espritiens !</h2>
+                    <p>Notre application a pour objectif:</p>
+                    <il>► D'enrichisser vos connaissances à travers nos cours partagés.</il>
+                    <br> <il>► De faciliter le logement et la mobilité à Esprit.</il>
+                    <br> <il>► De suivre les actualités d'Esprit...</il>
+                </div>
+            </div>
+            <div class="col-sm-6 col-sm-offset-1">
+                <div class="reg-form-container">
+
+                    <!-- Register/Login Tabs-->
+                    <div class="reg-options">
+                        <ul class="nav nav-tabs">
+                            <li class="active" ><a href="#register" data-toggle="tab">Inscrivez-vous</a></li>
+                        </ul><!--Tabs End-->
+                    </div>
+
+
+
+                    {{ form_start(form) }}
+
+
+                    <!--Registration Form Contents-->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="register">
+                            <center><h3 style="color: #d32f2f;" >Inscrire maintenant!!!</h3></center>
+                            <center>  <p class="text-muted">Rejoignez-nous aujourd'hui pour se former autrement.</p>
+                            </center>
+                            <!--Register Form-->
+                            <form name="registration_form" id='registration_form' class="form-inline">
+                                <div class="row">
+
+                                    <div class="form-group col-xs-6">
+
+                                        {{ form_widget(form.email, { 'attr': {'class': 'form-control input-group-lg','placeholder': "Email"} }) }}
+
+                                    </div>
+                                    <div class="form-group col-xs-6">
+
+                                        {{ form_widget(form.username,{'attr': {'class': 'form-control input-group-lg','placeholder': "Pseudo"}}) }}
+                                    </div>
+                                    <div class="form-group col-xs-6">
+
+                                        {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control input-group-lg','placeholder': "Mot de passe"}}) }}
+                                    </div>
+                                    <div class="form-group col-xs-6">
+
+                                        {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control input-group-lg','placeholder': "Mot de passe"}}) }}
+                                    </div>
+
+                                    <div class="form-group col-xs-6">
+
+                                        {{ form_widget(form.reNom,  {'attr': {'class': 'form-control input-group-lg','placeholder': "Nom"}}) }}
+                                    </div>
+                                    <div class="form-group col-xs-6">
+
+                                        {{ form_widget(form.rePrenom,  {'attr': {'class': 'form-control input-group-lg','placeholder': "Prenom"}}) }}
+                                    </div>
+                                    <div class="form-group col-xs-6">
+
+                                        {{ form_widget(form.imageFile,  {'attr': {'class': 'form-control input-group-lg','placeholder': "image"}}) }}
+                                    </div>
+
+                                </div>
+                            </form>
+                            <br>
+
+                            <!--Register Now Form Ends-->
+                            <p><a href="/login">J'ai un compte</a></p>
+                            <input type="submit" value="{{ 'registration.submit'|trans }} " class="btn btn-primary" />
+
+                        </div><!--Registration Form Contents Ends-->
+                        <div>
+
+                        </div>
+                        {{ form_end(form) }}
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="services">
+            <section class="section white">
+                <div class="inner">
+                    <div class="container">
+
+                        <!-- Services -->
+                        <div class="heading text-center">
+                            <h2 style="color:#d32f2f;" >Pourquoi EspritEntraide?</h2>
+                            <hr class="line" />
+                            <span><h4 style="color:white">Notre application offre les meilleurs services pour nos chers etudiants.</h4></span>
+                            <br>
+                        </div> <!-- end .heading -->
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="services">
+                                    <div class="icon">
+                                        <div class="inner"><i class="fa fa-calendar"></i></div>
+                                    </div> <!-- end .icon -->
+                                    <div class="content">
+                                        <h5 style="color:white;">Flexibilité de plannification</h5>
+                                        <p><h5 style="color:grey">Notre application vous donne la possibilité de consultez les dates des evénements.</h5></p>
+                                    </div> <!-- end .content -->
+                                </div> <!-- end .services -->
+                            </div> <!-- end .col-sm-4 -->
+                            <div class="col-sm-4">
+                                <div class="services">
+                                    <div class="icon">
+                                        <div class="inner"><i class="fa fa-users"></i></div>
+                                    </div> <!-- end .icon -->
+                                    <div class="content">
+                                        <h5 style="color:white;">La solidarité</h5>
+                                        <p><h5 style="color:grey">Notre application à pour buts de créer une solidarité entre les etudiants.</h5></p>
+                                    </div> <!-- end .content -->
+                                </div> <!-- end .services -->
+                            </div> <!-- end .col-sm-4 -->
+                            <div class="col-sm-4">
+                                <div class="services">
+                                    <div class="icon">
+                                        <div class="inner"><i class="fa fa-pencil-square-o"></i></div>
+                                    </div> <!-- end .icon -->
+                                    <div class="content">
+                                        <h5 style="color:white;">Des tests en ligne</h5>
+                                        <p><h5 style="color:grey">Après l'inscription, vous pouvez passer des quiz en ligne pour évaluer votre niveau.</h5></p>
+                                    </div> <!-- end .content -->
+                                </div> <!-- end .services -->
+                            </div> <!-- end .col-sm-4 -->
+                        </div> <!-- end .row -->
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="services">
+                                    <div class="icon">
+                                        <div class="inner"><i class="fa fa-book"></i></div>
+                                    </div> <!-- end .icon -->
+                                    <div class="content">
+                                        <h5 style="color:white;">Des cours gratuits</h5>
+                                        <p><h5 style="color:grey">Nous mettons à votre disposition des cours pour enraichir vos connaissances.</h5></p>
+                                    </div> <!-- end .content -->
+                                </div> <!-- end .services -->
+                            </div> <!-- end .col-sm-4 -->
+                            <div class="col-sm-4">
+                                <div class="services">
+                                    <div class="icon">
+                                        <div class="inner"><i class="fa fa-gift"></i></div>
+                                    </div> <!-- end .icon -->
+                                    <div class="content">
+                                        <h5 style="color:white;">Des offres de stage </h5>
+                                        <p><h5 style="color: grey">On vous offre des opportunités de stage professionel au sein de vos etudes.</h5></p>
+                                    </div> <!-- end .content -->
+                                </div> <!-- end .services -->
+                            </div> <!-- end .col-sm-4 -->
+                            <div class="col-sm-4">
+                                <div class="services">
+                                    <div class="icon">
+                                        <div class="inner"><i class="fa fa-credit-card"></i></div>
+                                    </div> <!-- end .icon -->
+                                    <div class="content">
+                                        <h5 style="color:white;">Nos services</h5>
+                                        <p><h5 style="color:grey">Suivez nous chaque jours pour consulter des annonces de mobilisation et de logement.
+                                        </h5></p>
+                                    </div> <!-- end .content -->
+                                </div> <!-- end .services -->
+                            </div> <!-- end .col-sm-4 -->
+                        </div> <!-- end .row -->
+
+                    </div> <!-- end .container -->
+                </div> <!-- end .inner -->
+            </section> <!-- end .section -->
+        </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer" >
+        <div class="container" >
+            <div class="row" >
+                <div class="footer-wrapper">
+                    <div class="col-md-3 col-sm-3" >
+                        <a href="#"><img src="{{ asset('Template/images/logo.png') }}" width="200 px " height="95px"  alt="" class="footer-logo" /></a>
+                        <ul class="list-inline social-icons">
+                            <li><a href="#"><i class="icon ion-social-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon ion-social-twitter"></i></a></li>
+                            <li><a href="#"><i class="icon ion-social-googleplus"></i></a></li>
+                            <li><a href="#"><i class="icon ion-social-pinterest"></i></a></li>
+                            <li><a href="#"><i class="icon ion-social-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <h6>For individuals</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">Signup</a></li>
+                            <li><a href="#">login</a></li>
+
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Language settings</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2 col-sm-2">
+                        <h6>Sur</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">A propos de nous </a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                            <li><a href="#">Aidez-moi</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <h6>Contactez nous</h6>
+                        <ul class="contact" style="color: #ffffff">
+                            <li><i class="icon ion-ios-telephone-outline"></i>+216 99 999 999</li>
+                            <li><i class="icon ion-ios-email-outline"></i>infoLEADERS@esprit.tn</li>
+                            <li><i class="icon ion-ios-location-outline"></i>Z.I. Chotrana II, Ariana</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>LEADERS Team © 2018. Tous les droits sont réservés
+            </p>
+        </div>
+    </footer>
+    <!-- endfooter -->
+
+{% endblock %}

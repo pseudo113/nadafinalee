@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from thunder-team.com/friend-finder/newsfeed.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Mar 2017 13:58:46 GMT -->
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is social network html5 template available in themeforest......" />
+    <meta name="keywords" content="Social Network, Social Media, Make Friends, Newsfeed, Profile Page" />
+    <meta name="robots" content="index, follow" />
+    <title>EspritEntreAide</title>
+
+    <!-- Stylesheets
+    ================================================= -->
+    <link rel="stylesheet" href="{{ asset('Template/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('Template/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('Template/css/ionicons.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('Template/css/font-awesome.min.css') }}" />
+    <link href="{{ asset('css/emoji.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/visiteur/css/portfolio.css') }}" rel="stylesheet" type="text/css" media="all" />
+    <script src="{{ asset('bundles/visiteur/js/jquery.min.js') }}"></script>
+    <!-- js for portfolio -->
+    <script src="{{ asset('bundles/visiteur/js/TweenMax.min.js') }}"></script>
+    <script src="{{ asset('bundles/visiteur/js/portfolio.js') }}"></script>
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/png" href="{{ asset('Template/images/logo-back.png') }}"/>
+</head>
+<body >
+
+<!-- Header
+================================================= -->
+<div id="header" >
+    <nav class="navbar navbar-default navbar-fixed-top menu" >
+        <div class="container" >
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header"><img src="{{ asset('Template/images/logo.png') }}"  width="150 px " height="50 px" alt="logo" />
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right main-menu">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Accueil <span><img src="{{ asset('Template/images/down-arrow.png') }}" alt="" /></span></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Covoiturage <span><img src="{{ asset('Template/images/down-arrow.png') }}" alt="" /></span></a>
+                        <ul class="dropdown-menu newsfeed-home">
+                            <li><a href="newsfeed.html">Mes annonces</a></li>
+                            <li><a href="newsfeed-people-nearby.html">Annonces</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Collocation <span><img src="{{ asset('Template/images/down-arrow.png') }}" alt="" /></span></a>
+                        <ul class="dropdown-menu login">
+                            <li><a href="timeline.html">Mes annonces</a></li>
+                            <li><a href="timeline-about.html">Annonces</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle pages" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cours <span><img src="{{ asset('Template/images/down-arrow.png') }}" alt="" /></span></a>
+                        <ul class="dropdown-menu page-list">
+                            <li><a href="{{ path('show_fichier_front') }}">Mes cours </a></li>
+
+
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle pages" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actualités <span><img src="{{ asset('Template/images/down-arrow.png') }}" alt="" /></span></a>
+                        <ul class="dropdown-menu page-list">
+                            <li><a href="index.html">Nouveautés</a></li>
+                            <li><a href="index-register.html">Evenements</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle pages" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clubs <span><img src="{{ asset('Template/images/down-arrow.png') }}" alt="" /></span></a>
+                        <ul class="dropdown-menu page-list">
+                            <li><a href="index.html">Liste des clubs 1</a></li>
+                            <li><a href="index-register.html">Evenements</a></li>
+                        </ul>
+                    </li>
+
+
+                    <form class="navbar-form navbar-right hidden-sm">
+                        <div class="form-group">
+                            <i class="icon ion-android-search"></i>
+                            <input type="text" class="form-control" placeholder="Rechercher......">
+                        </div>
+                    </form>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+</div>
+<!--Header End-->
+{% block A %}
+    <table border="2"> <tr><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></tr></table>
+{% endblock %}
+{% block B %}
+{% endblock %}
+<!-- Footer
+================================================= -->
+
+<footer id="footer" >
+    <div class="container" >
+        <div class="row" >
+            <div class="footer-wrapper">
+                <div class="col-md-3 col-sm-3" >
+                    <a href="#"><img src="{{ asset('Template/images/logo.png') }}" width="200 px " height="95px"  alt="" class="footer-logo" /></a>
+                    <ul class="list-inline social-icons">
+                        <li><a href="#"><i class="icon ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="icon ion-social-twitter"></i></a></li>
+                        <li><a href="#"><i class="icon ion-social-googleplus"></i></a></li>
+                        <li><a href="#"><i class="icon ion-social-pinterest"></i></a></li>
+                        <li><a href="#"><i class="icon ion-social-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-2">
+                    <h6>For individuals</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Signup</a></li>
+                        <li><a href="#">login</a></li>
+
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Language settings</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 col-sm-2">
+                    <h6>Sur</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">A propos de nous </a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">Aidez-moi</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <h6>Contactez nous</h6>
+                    <ul class="contact" style="color: #ffffff">
+                        <li><i class="icon ion-ios-telephone-outline"></i>+216 99 999 999</li>
+                        <li><i class="icon ion-ios-email-outline"></i>infoLEADERS@esprit.tn</li>
+                        <li><i class="icon ion-ios-location-outline"></i>Z.I. Chotrana II, Ariana</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>LEADERS Team © 2018. Tous les droits sont réservés
+        </p>
+    </div>
+</footer>
+
+<!--preloader-->
+<div id="spinner-wrapper">
+    <div class="spinner"></div>
+</div>
+
+<!-- Scripts
+================================================= -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTMXfmDn0VlqWIyoOxK8997L-amWbUPiQ&amp;callback=initMap"></script>
+<script src="{{ asset('Template/js/jquery-3.1.1.min.js') }}"></script>
+<script src="{{ asset('Template/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('Template/js/jquery.sticky-kit.min.js') }}"></script>
+<script src="{{ asset('Template/js/jquery.scrollbar.min.js') }}"></script>
+<script src="{{ asset('Template/js/script.js') }}"></script>
+<script src="{{ asset('bundles/app/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
+
+</body>
+
+<!-- Mirrored from thunder-team.com/friend-finder/newsfeed.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Mar 2017 14:00:41 GMT -->
+</html>
+

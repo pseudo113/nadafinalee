@@ -1,0 +1,93 @@
+{% extends 'baseFront.html.twig' %}
+{%  block pagestyle %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/vendors/datatables/css/dataTables.bootstrap.css') }}" />
+
+    <link href="{{ asset('bundles/app/css/pages/tables.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/vendors/datatables/css/dataTables.colReorder.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/vendors/datatables/css/dataTables.scroller.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/vendors/datatables/css/dataTables.bootstrap.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('jTable/jquery.dataTables.min.css') }}" />
+
+{% endblock %}
+
+
+
+
+{% block A %}
+    <section class="portfolio-agileinfo" id="portfolio">
+        <div class="container">
+            <h3 class="text-center slideanim slide">Les Cours déposés</h3>
+            <ul class=" gallery-wrap list">
+
+
+
+                {% for user in fichier %}
+                    <li class="gallery-item slideanim slide">
+                        <div class="gallery-link">
+                            <h4 class="gallery-name">{{user.id }}</h4>
+                            <br>
+                            <br>
+                            <div class="gallery-department">{{  user.nom  }}</div>
+                            <br>
+                            <img src="{{ asset('images/products/'~user.idUser.imageName) }}" style="max-height: 100px ; max-width: 100px" class="profile-photo-sm pull-left"  alt="riot">
+                            <div class="hidden person-info-wrap">
+                                <ul class="person-info">
+                                    <br>
+                                    <img src="{{ asset('images/products/'~user.idUser.imageName) }}" style="max-height: 100px ; max-width: 100px" class="profile-photo-sm pull-left"  alt="riot">
+<br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <a href="{{ path("cours",{'idx':user.id}) }}">
+
+                                                          <h5><a href="{{ path("cours",{'idx':user.id}) }}">{{ user.nom }}</a></h5>
+
+                                        <a href="{{ path("cours",{'idx':user.id}) }}" class="text-green">{{ user.type }}</a>
+                              </ul>
+
+                            </div>
+
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="lightbox-item hidden"></div>
+        <div class="lightbox-bg hidden"></div>
+        <div class="lightbox-img hidden"></div>
+
+
+
+    </section>
+{%endblock%}
+
+
+
+
+
+
+
+
+
+
+
+{% block js %}
+    <script>
+        $('#count').each(function () {
+            $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 2500,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript" src="{{ asset('jTable/jquery.dataTables.min.js') }}"></script>
+    <script type="text/javascript">$(document).ready(function() {
+            $('#table').DataTable();
+        } );
+    </script>
+{% endblock %}

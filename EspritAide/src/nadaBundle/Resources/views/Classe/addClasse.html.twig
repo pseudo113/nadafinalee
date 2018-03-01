@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <aside class="right-side">
+        <!-- Main content -->
+        <section class="content-header" style="padding-left: 20px">
+
+            <h4> Nouvelle Classe</h4>
+            <ol class="breadcrumb">
+                <li class="active">
+                    <a href="{{ path('nada_default_index') }}">
+                        <i class="livicon" data-name="home" data-size="16" data-color="#333" data-hovercolor="#333"></i>
+                        Home
+                    </a>
+                </li>
+                <li class="active">
+
+                        Nouvelle Classe
+                    </a>
+                </li>
+            </ol>
+        </section>
+        <section class="content">
+            <section class="content paddingleft_right15">
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <div class="panel">
+                            <div class="panel-heading" style="background-color: #A6192E;color:#ffffee">
+                                <h4 class="panel-title">
+                                    <i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
+                                    Information de Classe
+                                </h4>
+                            </div>
+            {{ form_start(form) }}
+                            <div class="panel-body">
+                                <div class="field-input">
+                                    <label> Niveau</label>
+
+                                    {{ form_widget(form.niveau, {'id':'niveau','attr': {'class': 'form-control','placeholder':'niveau' }}) }}
+                                </div>
+
+                                <div class="field-input">
+                                    <label> Numéro</label>
+
+                                    {{ form_widget(form.numero, {'id':'numero','attr': {'class': 'form-control','placeholder':'Nom numero' }}) }}
+                                </div>
+                                <br>
+                                <div>
+
+                                    <input class="btn btn-lg btn-block" style="background-color: #A6192E; color: #ffffee; " type="submit" id="_submit" name="_submit" value="{{ 'Nouvelle Classe'|trans }}" />
+
+                                </div>
+                                {{ form_end(form) }}
+
+
+
+
+                            </div>
+                        </div></div>
+
+
+                </div>
+
+
+
+
+            </section>
+        </section>
+    </aside>
+
+
+{% endblock%}

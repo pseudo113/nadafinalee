@@ -1,0 +1,31 @@
+{% extends 'baseFront.html.twig' %}
+
+{% block A %}
+    <embed src="{{ asset('images/products/'~list.imageName) }}" width="1485" height="700" type='application/pdf'>
+<center><a href="{{ asset('images/products/'~list.imageName) }}"  class=" img-fluid "  download="" alt="riot">download<a></center>
+    <div class="line-divider"></div>
+    {% for user in comment %}
+
+        <div class="post-comment">
+        <img src="{{ asset('images/products/'~user.idUser.imageName) }}" alt="" class="profile-photo-sm" />
+        <p><a href="" class="profile-link">{{ user.idUser.reNom }} {{ user.idUser.rePrenom }}</a><i class="em em-laughing"></i>
+        {{ user.commentaire }}
+            <br>
+            <a href="{{ path('delete_comment',{'id': user.id}) }}">supprimer</a>
+        </p>
+    </div>
+        {% endfor %}
+    {{ form_start(form) }}
+    <div class="post-comment">
+        <img src="{{ asset('images/products/'~user.imageName) }}" alt="" class="profile-photo-sm" />
+        {{ form_widget(form.commentaire, {'id':'commentaire','attr': {'class': 'form-control','placeholder':' Post a comment','type':'text' }}) }}
+
+
+    </div>
+    <div>
+
+        <input class="btn btn-lg btn-block" style="background-color: #A6192E; color: #ffffee; " type="submit" id="_submit" name="_submit" value="{{ 'Comment'|trans }}" />
+
+    </div>
+    {{ form_end(form) }}
+{% endblock %}
